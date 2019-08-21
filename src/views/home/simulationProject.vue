@@ -121,11 +121,7 @@
       */
       menu() {
         this.scroll = document.documentElement.scrollTop || document.body.scrollTop;
-        if(this.scroll > 210){
-          this.openTransparent = false
-        } else {
-          this.openTransparent = true
-        }
+        this.openTransparent = this.scroll <= 210;
       }
     },
     mounted() {
