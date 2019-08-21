@@ -19,11 +19,7 @@
 methods: {
       menu() {
         this.scroll = document.documentElement.scrollTop || document.body.scrollTop;
-        if(this.scroll > 高度){
-          this.openTransparent = false
-        } else {
-          this.openTransparent = true
-        }
+        this.openTransparent = this.scroll <= 高度;
       }
     },
     mounted() {
